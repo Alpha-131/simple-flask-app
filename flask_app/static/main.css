@@ -19,3 +19,11 @@
             font-weight: bold; /* Add bold font weight */
             margin-right: 15px; /* Add spacing between links */
         }
+
+        .content-section {
+            background: #ffffff;
+            padding: 10px 20px;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            margin-bottom: 20px;
+          }
