@@ -14,5 +14,5 @@ def login():
 
 @users.route('/submit')
 def submit():
-    return render_template('register.html')
+    return render_template('submit.html')
 

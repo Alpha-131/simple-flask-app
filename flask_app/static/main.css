@@ -1,0 +1,21 @@
+        /* Add any custom styling here */
+        /* Center the logo and make it slightly larger */
+        .navbar-brand img {
+            display: block;
+            margin: 0 auto;
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Add background color and padding to the navbar */
+        .custom-navbar {
+            background-color: #007bff; /* Change to your preferred color */
+            padding: 10px 0;
+        }
+
+        /* Style the navigation links */
+        .navbar-nav .nav-link {
+            color: #fff !important; /* Change link text color */
+            font-weight: bold; /* Add bold font weight */
+            margin-right: 15px; /* Add spacing between links */
+        }
