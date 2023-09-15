@@ -12,7 +12,7 @@ users = Blueprint(name='users', import_name=__name__)
 def register():
     if current_user.is_authenticated:
         return redirect(url_for('main.home'))
-    form = RegistrationForm()
+    form = Registration_form()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf8')
         user = User(username=form.username.data, email=form.email.data, password=hashed_password)
@@ -29,7 +29,7 @@ def register():
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('main.home'))
-    form = LoginForm()
+    form = Login_form()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
