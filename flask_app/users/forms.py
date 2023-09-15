@@ -1,6 +1,8 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo
+from flask_wtf.file import FileField, FileAllowed
+
 
 #registration form start
 class Registration_form(FlaskForm):
@@ -19,3 +21,10 @@ class Login_form(FlaskForm):
     remember = BooleanField(label='Remember Me')
     submit = SubmitField(label='Log In')
 #login form end
+
+
+#submit form start
+class Submit_form(FlaskForm):
+    file = FileField(label="Upload Files:", validators=[FileAllowed(['jpg','jpeg','png','txt','pdf'])])
+    submit = SubmitField(label='Upload')
+#submit form end

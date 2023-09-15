@@ -24,4 +24,4 @@ def create_app(config_class=config):
     app.register_blueprint(main)
     app.register_blueprint(users)
 
-    return app
+    return app  
